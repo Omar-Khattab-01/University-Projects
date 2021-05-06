@@ -1,0 +1,189 @@
+# Family name: Khattab 
+# Student number:  300202727
+# Course: IT1 1120 
+# Assignment Number 6
+# year 2020
+
+>>> r1=Rectangle(Point(), Point(0,3), "red")
+>>> r1
+Rectangle(Point(0,0), Point(0,3) , 'red')
+>>> r1.get_color()
+'red'
+>>> r1.get_bottom_left()
+Point(0,0)
+>>> r1.get_top_right()
+Point(0,3)
+>>> r1.reset_color("green")
+>>> r1.get_color()
+'green'
+>>> r1
+Rectangle(Point(0,0), Point(0,3) , 'green')
+>>> r1.move(4,3)
+>>> r1
+Rectangle(Point(4,3), Point(4,6) , 'green')
+>>> print(r1)
+I am a green rectangle with bottom left corner at (4, 3) and top right corner at (4, 6).
+>>> r2=eval(repr(r1))
+>>> r2
+Rectangle(Point(4,3), Point(4,6) , 'green')
+>>> r1 is r2
+False
+>>> r1==r2
+True
+>>> r3=Rectangle(Point(), Point(2,1), "red")
+>>> r3.get_perimeter()
+6
+>>> r4=Rectangle(Point(1,1), Point(6,2), "red")
+>>> r4.get_perimeter()
+12
+>>> r4=Rectangle(Point(1,1), Point(2,2.5), "blue")
+>>> r4.get_area()
+1.5
+>>> r5=Rectangle(Point(1,1), Point(2,2.5), "blue")
+>>> r5.get_area()
+1.5
+>>> r5.get_perimeter()
+5.0
+>>> r4 == r5
+True
+>>> r4 is r5
+False
+>>> 
+>>> 
+>>> 
+>>> 
+>>> r=Rectangle(Point(1,1), Point(2,5), "blue")
+>>> r.contains(1.5,1)
+True
+>>> r.contains(2,2)
+True
+>>> r.contains(0,0)
+False
+>>> r.contains(-1,-1)
+False
+>>> r.contains(1.75,3)
+True
+##############################################
+>>> r1=Rectangle(Point(1,1), Point(2,2), "blue")
+>>> r2=Rectangle(Point(2,2.5), Point(3,3), "blue")
+>>> r3=Rectangle(Point(1.5,0),Point(1.7,3),"red")
+>>> 
+>>> 
+>>> print(r2)
+I am a blue rectangle with bottom left corner at (2, 2.5) and top right corner at (3, 3).
+>>> 
+>>> 
+>>> r1.intersects(r2)
+False
+>>> r2.intersects(r1)
+False
+>>> r1.intersects(r3)
+True
+>>> r2.intersects(r3)
+False
+>>> 
+>>> 
+>>> r4=Rectangle(Point(2,2),Point(3,5),"red")
+>>> r1.intersects(r4)
+True
+>>> 
+############################################
+>>> c=Canvas()
+>>> len(c)
+0
+>>> r1=Rectangle(Point(1,1), Point(2,2), "blue")
+>>> r2=Rectangle(Point(2,2.5), Point(3,3), "blue")
+>>> r3=Rectangle(Point(1.5,0),Point(1.7,3),"red")
+>>> c.add_one_rectangle(r1)
+>>> c.add_one_rectangle(r2)
+>>> c.add_one_rectangle(r3)
+>>> c.add_one_rectangle( Rectangle(Point(1,1),Point(57,59),"black") )
+>>> len(c)
+4
+>>> c
+Canvas([Rectangle(Point(1,1),Point(2,2),'blue'), Rectangle(Point(2,2.5),Point(3,3),'blue'), Rectangle(Point(1.5,0),Point(1.7,3),'red'), Rectangle(Point(1,1),Point(57,59),'black')])
+>>> c.count_same_color("blue")
+2
+>>> c.count_same_color("red")
+1
+>>> c.count_same_color("purple")
+0
+>>> c.count_same_color("black")
+1
+#############################################
+>>> c=Canvas()
+>>> r1=Rectangle(Point(1,1), Point(2,2), "blue")
+>>> r2=Rectangle(Point(1,1), Point(4,4), "blue")
+>>> r3=Rectangle(Point(-2,-2), Point(-1,-1), "blue")
+>>> c.add_one_rectangle(r1)
+>>> c.add_one_rectangle(r2)
+>>> c.add_one_rectangle(r3)
+>>> c.total_perimeter()
+20
+>>> c.add_one_rectangle(Rectangle(Point(1,1),Point(57,59),"black"))
+>>> c.total_perimeter()
+248
+>>> c.total_perimeter()
+248
+>>> c.add_one_rectangle(Rectangle(Point(1,1),Point(2,2),"black"))
+>>> c.total_perimeter()
+252
+###############################################
+>>> c=Canvas()
+>>> r1=Rectangle(Point(1,1), Point(2,2), "blue")
+>>> r2=Rectangle(Point(1,1), Point(4,4), "blue")
+>>> r3=Rectangle(Point(-2,-2), Point(-1,-1), "blue")
+>>> r4=Rectangle(Point(0,-100),Point(1,100), "yellow")
+>>> c.add_one_rectangle(r1)
+>>> c.add_one_rectangle(r2)
+>>> c.add_one_rectangle(r3)
+>>> c.add_one_rectangle(r4)
+>>> c.min_enclosing_rectangle()
+Rectangle(Point(-2,-100), Point(4,100) , 'blue')
+>>> c.min_enclosing_rectangle()
+Rectangle(Point(-2,-100), Point(4,100) , 'white')
+>>> c.min_enclosing_rectangle()
+Rectangle(Point(-2,-100), Point(4,100) , 'black')
+>>> c.add_one_rectangle(Rectangle(Point(1,1),Point(2,2),"black"))
+>>> c.min_enclosing_rectangle()
+Rectangle(Point(-2,-100), Point(4,100) , 'blue')
+>>> c.add_one_rectangle(Rectangle(Point(1,-129),Point(87,2),"black"))
+>>> c.min_enclosing_rectangle()
+Rectangle(Point(-2,-129), Point(87,100) , 'yellow')
+#################################################
+>>> c=Canvas()
+>>> r1=Rectangle(Point(1,1), Point(2,2), "blue")
+>>> r2=Rectangle(Point(1.5,1.5), Point(4,4), "blue")
+>>> r3=Rectangle(Point(-2,-2), Point(2,1.5), "blue")
+>>> r4=Rectangle(Point(0,-100),Point(1.5,100), "yellow")
+>>> c.add_one_rectangle(r1)
+>>> c.add_one_rectangle(r2)
+>>> c.add_one_rectangle(r3)
+>>> c.add_one_rectangle(r4)
+>>> c.common_point()
+True
+>>> c.add_one_rectangle(Rectangle(Point(9,1),Point(2,2),"black"))
+>>> c.common_point()
+False
+#################################################
+>>> c=Canvas()
+>>> r1=Rectangle(Point(-2,-2), Point(-1,2), "blue")
+>>> r2=Rectangle(Point(-2,-2), Point(2,-1), "blue")
+>>> r3=Rectangle(Point(1,-2), Point(2,2), "blue")
+>>> r4=Rectangle(Point(-2,1), Point(2,2), "blue")
+>>> c.add_one_rectangle(r1)
+>>> c.add_one_rectangle(r2)
+>>> c.add_one_rectangle(r3)
+>>> c.add_one_rectangle(r4)
+>>> c.common_point()
+False
+################################################
+>>> c=Canvas()
+>>> r1=Rectangle(Point(), Point(1,1), "blue")
+>>> r2=Rectangle(Point(1,1), Point(2,2),  "red")
+>>> r3=Rectangle(Point(1,1), Point(2,2),  "green")
+>>> c.add_one_rectangle(r1)
+>>> c.add_one_rectangle(r2)
+>>> c.add_one_rectangle(r3)
+>>> c.common_point()
+True

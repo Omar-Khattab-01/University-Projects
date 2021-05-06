@@ -1,0 +1,189 @@
+# Family name: Khattab 
+# Student number:  300202727
+# Course: IT1 1120 
+# Assignment Number 3
+# year 2020
+
+>>> #The Core Function
+>>> 
+>>> is_up_monotone("12311234","2")
+12, 31, 12, 34
+False
+>>> is_up_monotone ("12311234","4")
+1231, 1234
+True
+>>> is_up_monotone("0012311234","2")
+00, 12, 31, 12, 34
+False
+>>> is_up_monotone("0012311234","5")
+00123, 11234
+True
+>>> is_up_monotone("1","1")
+1
+True
+>>> is_up_monotone("734","1")
+7, 3, 4
+False
+>>> is_up_monotone("734","3")
+734
+True
+>>> is_up_monotone("734","1")
+7, 3, 4
+False
+>>> is_up_monotone("347","1")
+3, 4, 7
+True
+>>> is_up_monotone("100200300400","3")
+100, 200, 300, 400
+True
+>>> 
+>>>
+>>>#User Interaction
+>>>
+= RESTART: C:\Users\omark\OneDrive\Desktop\Intro to Computing\Assignments\a3\a3_300202727\a3_part_1_300202727.py
+****************************************
+*                                      *
+*  __Welcome to up-monotone inquiry__  *
+*                                      *
+****************************************
+What is your name? Omar
+***********************************************
+*                                             *
+*  __Omar, welcome to up-monotone inquiry.__  *
+*                                             *
+***********************************************
+omar, would you like to test if a number admits an up-monotone split of given size? yup
+Please enter yes or no. Try again.
+omar, would you like to test if a number admits an up-monotone split of given size?    yup
+Please enter yes or no. Try again.
+omar, would you like to test if a number admits an up-monotone split of given size?      YeS
+Good Choice!
+Enter a positive integer:123156
+Input the split. The split has to divide the length of 123156 i.e. 6
+4
+4 does not divide 6. Try again
+omar, would you like to test if a number admits an up-monotone split of given size?      yeS
+Good Choice!
+Enter a positive integer:        123156 
+Input the split. The split has to divide the length of 123156 i.e. 6
+3
+123, 156
+The sequence is up-monotone
+omar, would you like to test if a number admits an up-monotone split of given size? yes
+Good Choice!
+Enter a positive integer:3.4
+The input has to only contain digits. Try again.
+omar, would you like to test if a number admits an up-monotone split of given size? YES
+Good Choice!
+Enter a positive integer:-50
+The input has to be a positive integer.Try again.
+omar, would you like to test if a number admits an up-monotone split of given size? yes
+Good Choice!
+Enter a positive integer:-50.5
+The input can only contain digits and has to be a positive integer. Try again.
+omar, would you like to test if a number admits an up-monotone split of given size? yes
+Good Choice!
+Enter a positive integer:1210
+Input the split. The split has to divide the length of 1210 i.e. 4
+2
+12, 10
+The sequence is not up-monotone
+omar, would you like to test if a number admits an up-monotone split of given size? yes
+Good Choice!
+Enter a positive integer:Fourty
+The input can only contain digits. Try again.
+omar, would you like to test if a number admits an up-monotone split of given size? yes
+Good Choice!
+Enter a positive integer:6784
+Input the split. The split has to divide the length of 6784 i.e. 4
+		1
+6, 7, 8, 4
+The sequence is not up-monotone
+omar, would you like to test if a number admits an up-monotone split of given size? yes
+Good Choice!
+Enter a positive integer:6789
+Input the split. The split has to divide the length of 6789 i.e. 4
+1
+6, 7, 8, 9
+The sequence is up-monotone
+omar, would you like to test if a number admits an up-monotone split of given size? yes
+Good Choice!
+Enter a positive integer:-2.5
+The input can only contain digits and has to be a positive integer. Try again.
+omar, would you like to test if a number admits an up-monotone split of given size? yes
+Good Choice!
+Enter a positive integer:0
+The input has to be a positive integer.Try again.
+omar, would you like to test if a number admits an up-monotone split of given size? yes
+Good Choice!
+Enter a positive integer:88
+Input the split. The split has to divide the length of 88 i.e. 2
+2
+88
+The sequence is up-monotone
+omar, would you like to test if a number admits an up-monotone split of given size? 00001
+Please enter yes or no. Try again.
+omar, would you like to test if a number admits an up-monotone split of given size? yes
+Good Choice!
+Enter a positive integer:00001
+Input the split. The split has to divide the length of 00001 i.e. 5
+5
+00001
+The sequence is up-monotone
+omar, would you like to test if a number admits an up-monotone split of given size? yes
+Good Choice!
+Enter a positive integer:99
+Input the split. The split has to divide the length of 99 i.e. 2
+-2
+The split can only contain digits. Try again.
+omar, would you like to test if a number admits an up-monotone split of given size? yes
+Good Choice!
+Enter a positive integer:358
+Input the split. The split has to divide the length of 358 i.e. 3
+5
+5 does not divide 3. Try again
+omar, would you like to test if a number admits an up-monotone split of given size? yes
+Good Choice!
+Enter a positive integer:345
+Input the split. The split has to divide the length of 345 i.e. 3
+10
+10 does not divide 3. Try again
+omar, would you like to test if a number admits an up-monotone split of given size?   yes
+Good Choice!
+Enter a positive integer:        1254715687917894
+Input the split. The split has to divide the length of 1254715687917894 i.e. 16
+4
+1254, 7156, 8791, 7894
+The sequence is not up-monotone
+omar, would you like to test if a number admits an up-monotone split of given size? yes
+Good Choice!
+Enter a positive integer:           12548135647145789168978
+Input the split. The split has to divide the length of 12548135647145789168978 i.e. 23
+23
+12548135647145789168978
+The sequence is up-monotone
+omar, would you like to test if a number admits an up-monotone split of given size? yes
+Good Choice!
+Enter a positive integer:0000550000
+Input the split. The split has to divide the length of 0000550000 i.e. 10
+2
+00, 00, 55, 00, 00
+The sequence is not up-monotone
+omar, would you like to test if a number admits an up-monotone split of given size? yes
+Good Choice!
+Enter a positive integer:0000550000
+Input the split. The split has to divide the length of 0000550000 i.e. 10
+5
+00005, 50000
+The sequence is up-monotone
+omar, would you like to test if a number admits an up-monotone split of given size? nope
+Please enter yes or no. Try again.
+omar, would you like to test if a number admits an up-monotone split of given size? ...no
+Please enter yes or no. Try again.
+omar, would you like to test if a number admits an up-monotone split of given size?    No
+************************
+*                      *
+*  __Good bye Omar!__  *
+*                      *
+************************
+>>> 
