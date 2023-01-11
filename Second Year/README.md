@@ -1,4 +1,4 @@
-Comtains projects and assignments for the following courses:
+Contains projects and assignments for the following courses:
 * CSI2132 DATABASES
 * SEG2105 INTRODUCTION TO SOFTWARE ENGINEERING
 * CSI2110 DATA STRUCTURES
