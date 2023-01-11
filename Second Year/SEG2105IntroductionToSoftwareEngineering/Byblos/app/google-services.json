@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "131544650899",
+    "project_id": "byblos-e16d5",
+    "storage_bucket": "byblos-e16d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131544650899:android:1811bec56309b31a896966",
+        "android_client_info": {
+          "package_name": "com.example.byblos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "131544650899-k25cdktjv13igh2fockpee0abemehbnm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB166CduuHIivDHdF_EaRoHzVpTNp8y-BA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "131544650899-k25cdktjv13igh2fockpee0abemehbnm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
