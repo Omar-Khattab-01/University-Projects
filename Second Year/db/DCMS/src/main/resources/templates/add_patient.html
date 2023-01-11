@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Patient</title>
+    <div th:insert="fragments/navbar :: navbar"></div>
+</head>
+<body>
+    <div class="content">
+        <div th:if="${failedAddition}">Could not add the patient to the database.</div>
+        <form action="#" th:action="@{/patient/add}" method="post">
+            <div th:insert="fragments/patient_form_components :: patient-form-components"></div>
+        </form>
+    </div>
+</body>
+</html>

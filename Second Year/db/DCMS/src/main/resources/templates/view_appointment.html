@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Appointment Details</title>
+    <div th:insert="fragments/navbar :: navbar"></div>
+</head>
+<body>
+    <div class="content">
+        <table>
+            <tr>
+                <th>Appointment ID:</th>
+                <td th:text="${appointment.getAppointmentId()}"></td>
+
+            </tr>
+            <tr>
+                <th>Patient ID:</th>
+                <td th:text="${appointment.getPatientId()}"></td>
+            </tr>
+            <tr>
+                <th>Patient Name:</th>
+                <td th:text="${appointment.getPatientName()}"></td>
+            </tr>
+            <tr>
+                <th>Dentist ID:</th>
+                <td th:text="${appointment.getDentistId()}"></td>
+            </tr>
+            <tr>
+                <th>Dentist Name:</th>
+                <td th:text="${appointment.getDentistName()}"></td>
+            </tr>
+            <tr>
+                <th>Appointment Date:</th>
+                <td th:text="${appointment.getAppointmentDate()}"></td>
+            </tr>
+            <tr>
+                <th>Start Time:</th>
+                <td th:text="${appointment.getStartTime()}"></td>
+            </tr>
+            <tr>
+                <th>End Time:</th>
+                <td th:text="${appointment.getEndTime()}"></td>
+            </tr>
+            <tr>
+                <th>Appointment Type:</th>
+                <td th:text="${appointment.getAppointmentType()}"></td>
+            </tr>
+            <tr>
+                <th>Appointment Status:</th>
+                <td th:text="${appointment.getAppointmentStatus()}"></td>
+            </tr>
+            <tr>
+                <th>Room:</th>
+                <td th:text="${appointment.getRoom()}"></td>
+            </tr>
+            <tr>
+                <th>Appointment Location:</th>
+                <td th:text="${appointment.getAppointmentLocation()}"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
