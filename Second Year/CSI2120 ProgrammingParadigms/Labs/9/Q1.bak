@@ -1,0 +1,2 @@
+#lang racket
+(apply-f + (apply-f sqr '(1,2,3,4)))

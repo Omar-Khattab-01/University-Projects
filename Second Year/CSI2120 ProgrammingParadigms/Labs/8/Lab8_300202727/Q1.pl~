@@ -1,0 +1,8 @@
+interval(X,L,H) :- number(X), number(L), number(H),
+    !, X> =L, X =< H.
+interval(X,X,H) :- number(X), number(H),
+    X=< H.
+interval(X,L,H) :- number(L), number(H),
+    L < H, L1 is L+1,
+    interval(X,L1,H).
+

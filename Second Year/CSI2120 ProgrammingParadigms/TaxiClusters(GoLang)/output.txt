@@ -1,0 +1,10 @@
+N=2 and 4 consumer threads → Execution Time = 20.0644665s
+N=4 and 4 consumer threads → Execution Time = 7.1028906s
+N=4 and 10 consumer threads → Execution Time = 6.890642s
+N=10 and 4 consumer threads → Execution Time = 1.5994933s
+N=10 and 10 consumer threads → Execution Time = 1.4079423s
+N=10 and 50 consumer threads → Execution Time = 1.4457756s
+N=20 and 10 consumer threads → Execution Time = 1.3177817s
+N=20 and 50 consumer threads → Execution Time = 1.25565s
+N=20 and 200 consumer threads → Execution Time = 1.2480894s
+Number of CPUs: 12

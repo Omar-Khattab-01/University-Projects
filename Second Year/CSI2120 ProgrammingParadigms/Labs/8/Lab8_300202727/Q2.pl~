@@ -1,0 +1,16 @@
+leafNodes(T,L):- leafNodes(T,[],L).
+
+%base caseleafNodes(nil,L,L):- !.
+
+leafNodes(t(Root,nil,nil),L,[Root|L]):-!.
+
+%k is right
+%I is left
+leafNodes(t(Root,Left,Right),L,K):-
+    leafNodes(Left,L,I),
+    leafNodes(Right,I,K).
+
+
+
+
+
