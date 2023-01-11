@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Patients</title>
+    <div th:insert="fragments/navbar :: navbar"></div>
+</head>
+<body>
+    <div class="content">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+                <th colspan="2">Actions</th>
+            </tr>
+            <tr th:each="patient : ${patients}">
+                <td th:text="${patient.getPersonID()}"></td>
+                <td th:text="${patient.getFirstName()}"></td>
+                <td th:text="${patient.getMiddleName()}"></td>
+                <td th:text="${patient.getLastName()}"></td>
+                <td><a class="submit-button" th:href="'/patient/view?id=' + ${patient.getPersonID()}">View Details</a></td>
+                <td th:if="${session.isReceptionist}"><a class="submit-button" th:href="'/patient/edit?id=' + ${patient.getPersonID()}">Edit Details</a></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
